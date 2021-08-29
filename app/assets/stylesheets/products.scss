@@ -3,5 +3,61 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .cart{
-    width: 5%;
+    width: 6%;
+}
+.product-color-box{
+    margin-bottom: 1.25em;
+}
+.product-color-box > * + * {
+    margin-left: 1.7em;
+}
+
+.product-color{
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.product-size{
+    color: grey;
+    font-weight: bold;
+    font-size: large;
+}
+.product-size > * {
+    margin-right: 1.2em;
+    padding: 0.3em 0.2em;
+    cursor: pointer;
+    &:hover{
+        background-color: lightgray;
+    }
+}
+
+.quantity-selector{
+    border: black solid 2px;
+    width: 80%;
+    margin-bottom: 1.25em;
+    & > *{
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.quantity-selector > * + * {
+    border-left: black solid 2px;
+}
+
+.qty-change{
+    cursor: pointer;
+}
+
+.btn_add_to_cart{
+    width: 80%;
+    border: none;
+    font-weight: 500;
+    font-size: 1.3em;
+    padding-top: 0.25em;
+    padding-bottom: .25em;
 }
