@@ -5,12 +5,13 @@ document.addEventListener("turbolinks:load",()=>{
     const next = document.querySelector('.next');
     const prev = document.querySelector('.prev');
     const slider = document.querySelector('.slider')
+    
     var clickedElem
     var direction;
 
     next.addEventListener('click',()=>{
         direction = -1
-        slider.style.transform= "translateY(-112px)"  
+        slider.style.transform= "translateY(-112px)" 
          
     })
     prev.addEventListener('click',()=>{
