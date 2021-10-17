@@ -11,8 +11,12 @@ document.addEventListener("turbolinks:load",()=>{
     const size = document.getElementById('size')
     const availableSizes  = ["Small", "Medium", "Large","X Large", "XX Large"]
     const sizeMeasurement = productSize.children
-   const quantitySelector = document.querySelector('.quantity-selector')
-   const quantity = document.querySelector('.quantity')
+    const quantitySelector = document.querySelector('.quantity-selector')
+    const quantity = document.querySelector('.quantity')
+    const addToCart = document.querySelector('.btn_add_to_cart')
+    const cartPopup = document.querySelector('.cart-popup')
+    const closeCart = document.querySelector('.close-cart')
+    const cart = document.querySelector('.cart')
     var clickedElem
     var direction;
     var clickedMeasurement
@@ -121,11 +125,26 @@ document.addEventListener("turbolinks:load",()=>{
             }
             
         }
-
-        
-
+    })
+    
+    addToCart.addEventListener('click', ()=> {
+        cartPopup.style.top = "0"   
+    })
+    closeCart.addEventListener('click', ()=>{
+        cartPopup.style.top ="-300px"
+    })
+    cart.addEventListener('mouseover', ()=>{
+        cartPopup.style.top = "0"
+    })
+    cart.addEventListener('mouseout', (e)=>{ 
+        cartPopup.style.top = "-300px"
     })
 
-  
+    cartPopup.addEventListener('mouseenter', ()=> {
+        cartPopup.style.top = "0"
+    })
+    cartPopup.addEventListener('mouseleave', ()=>{
+        cartPopup.style.top = "-300px"
+    })
 })
 
