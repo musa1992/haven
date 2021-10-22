@@ -131,20 +131,20 @@ document.addEventListener("turbolinks:load",()=>{
         cartPopup.style.top = "0"   
     })
     closeCart.addEventListener('click', ()=>{
-        cartPopup.style.top ="-300px"
+        cartPopup.style.top ="-352px"
     })
     cart.addEventListener('mouseover', ()=>{
         cartPopup.style.top = "0"
     })
     cart.addEventListener('mouseout', (e)=>{ 
-        cartPopup.style.top = "-300px"
+        cartPopup.style.top = "-352px"
     })
 
     cartPopup.addEventListener('mouseenter', ()=> {
         cartPopup.style.top = "0"
     })
     cartPopup.addEventListener('mouseleave', ()=>{
-        cartPopup.style.top = "-300px"
+        cartPopup.style.top = "-352px"
     })
 })
 
