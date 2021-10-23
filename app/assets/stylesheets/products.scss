@@ -153,7 +153,7 @@
 }
 
 .cart-popup{
-    width: 300px;
+    width: 330px;
     height: 350px;
     background-color: white;
     border: 0.5px #e6e5e5 solid;
@@ -185,38 +185,6 @@
     overflow-y: auto;
 
 }
-.cart-items {
-    display: flex;
-    
-    p {
-        margin: 0
-    };
-    .cart-image {
-        width: 100%;
-        height: 100%;
-        flex-shrink: 2;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    .product-description{
-        .delete-item-btn {
-            float: right;
-            cursor: pointer;
-            font-size: .8em;
-            &:hover{
-                color: red;
-            }
-        }
-        div {
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-}
-
 .sub-total {
     display: flex;
     justify-content: space-between;

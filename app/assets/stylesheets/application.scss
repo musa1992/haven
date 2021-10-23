@@ -14,5 +14,54 @@
  *= require_self
  */
 
- @import "bootstrap/scss/bootstrap"
+ @import "bootstrap/scss/bootstrap";
 
+body{
+    background-color: #EEEEEE;
+}
+
+.my_cart {
+    display: flex;
+    padding-top: .5em;
+    p {
+        margin: 0;
+    }
+}
+
+.cart-item-price {
+    font-weight: bold;
+    font-size: 1em;
+    padding-bottom: 1em;
+}
+.cart-product-title {
+    word-spacing: .4em;
+    font-size: 0.75em;
+
+}
+
+.cart-dlt-item {
+    float: right;
+    cursor: pointer;
+    &:hover {
+        color: red;
+    }
+}
+
+.cart-product-image {
+    flex: 0 0 auto;
+    width: 40%;
+    img {
+        width: 100%;
+    }
+}
+.cart-product-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .5em;
+    font-size: 0.75em;
+
+}
+
+.cart-product-details > * {
+    box-sizing: border-box;
+}
