@@ -202,6 +202,14 @@
         }
     }
     .product-description{
+        .delete-item-btn {
+            float: right;
+            cursor: pointer;
+            font-size: .8em;
+            &:hover{
+                color: red;
+            }
+        }
         div {
             display: flex;
             justify-content: space-between;
