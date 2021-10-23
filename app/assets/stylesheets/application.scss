@@ -49,9 +49,9 @@ body{
 
 .cart-product-image {
     flex: 0 0 auto;
-    width: 40%;
+    max-width: 100px;
     img {
-        width: 100%;
+        max-width: 100px;
     }
 }
 .cart-product-details {

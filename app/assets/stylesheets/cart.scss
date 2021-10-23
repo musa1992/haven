@@ -1,3 +1,75 @@
 // Place all the styles related to the cart controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.cart-section{
+    margin-top: 2em;
+}
+
+.cart-page {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+.cart-container {
+    padding: 0 1em;
+    margin-bottom: .5em;
+    background-color: #FFF;
+
+}
+
+.cart-heading {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.cart-products {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+
+.sub-total-cart {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    padding-top: 1.5em;
+    padding-bottom: .5em;
+    
+    :first-child{
+        margin-right: 2.5em;
+    }
+}
+
+.cart-total-section {
+    background-color: #FFF;
+    margin-left: .75em;
+    .cart-heading {
+        border-bottom: .5px lightgray solid;
+    }
+    .cart-total-subtotal {
+        display: flex;
+        justify-content: space-between;
+        :nth-child(1){
+            font-weight: bold;
+        }
+    }
+    button {
+        border: none;
+        background-color: #02884a;
+        color: #FFF;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: .75em;
+        padding-top: .75em;
+        font-size: 1em;
+    }
+}
+.payment-options {
+    
+    :nth-child(2){
+        display: flex;
+    }
+}
+
+

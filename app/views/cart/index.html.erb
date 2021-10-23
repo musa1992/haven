@@ -1,3 +1,40 @@
-<div class="container">
-    <%= render 'shared/cart_items' %>
+<div class="container cart-section">
+    <section class="cart-page">
+        <div class="full_cart">
+            <div class="cart-heading cart-container">
+                <h5>MY BAG</h5>
+            </div>
+            <div class="cart-products cart-container">
+                <%= render 'shared/cart_items'%>
+            </div>
+            <div class="cart-container sub-total-cart">
+                    <p>SUB-TOTAL</p>
+                    <P>Kshs. 3000.00</P>
+            </div>
+        </div>
+        <div class="cart-total-section">
+            <div class="cart-heading cart-container">
+                <h5>TOTAL</h5>
+            </div>
+            <div class="cart-container cart-total-subtotal">
+                <p>Sub-total</p>
+                <p>Kshs.3000.00</p>
+            </div>
+            <div class="cart-container">
+                <button>CHECKOUT</button>
+            </div>
+            <div class="payment-options cart-container">
+                <div>
+                    <P>WE ACCEPT:</P>
+                </div>
+                <div>
+                    <p>M-pesa</p>
+                    <p>Airtel Money</p>
+                </div>
+            </div>
+            <div class="cart-container">
+                <p>Got a discount code? Add it in the next step.</p>
+            </div>
+        </div>
+    </section>
 </div>
