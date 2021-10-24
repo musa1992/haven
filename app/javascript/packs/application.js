@@ -20,12 +20,17 @@ document.addEventListener('turbolinks:load', ()=>{
     const cartPopup = document.querySelector('.cart-popup')
     const closeCart = document.querySelector('.close-cart')
     const cart = document.querySelector('.cart')
+    var myPath = window.location.pathname
+    var page = myPath.split("/").pop()
+
     
     closeCart.addEventListener('click', ()=>{
         cartPopup.style.top ="-352px"
     })
     cart.addEventListener('mouseover', ()=>{
+        if (page != "index"){
         cartPopup.style.top = "0"
+        }
     })
     cart.addEventListener('mouseout', (e)=>{ 
         cartPopup.style.top = "-352px"
