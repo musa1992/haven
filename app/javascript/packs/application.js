@@ -12,3 +12,31 @@ import "custom/product_show"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+document.addEventListener('turbolinks:load', ()=>{
+    if(!Turbolinks){
+        location.reload()
+    }
+    const cartPopup = document.querySelector('.cart-popup')
+    const closeCart = document.querySelector('.close-cart')
+    const cart = document.querySelector('.cart')
+    
+    closeCart.addEventListener('click', ()=>{
+        cartPopup.style.top ="-352px"
+    })
+    cart.addEventListener('mouseover', ()=>{
+        cartPopup.style.top = "0"
+    })
+    cart.addEventListener('mouseout', (e)=>{ 
+        cartPopup.style.top = "-352px"
+    })
+
+    cartPopup.addEventListener('mouseenter', ()=> {
+        cartPopup.style.top = "0"
+    })
+    cartPopup.addEventListener('mouseleave', ()=>{
+        cartPopup.style.top = "-352px"
+    })
+})
+
+

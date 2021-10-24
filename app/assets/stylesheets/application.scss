@@ -20,6 +20,85 @@ body{
     background-color: #EEEEEE;
 }
 
+//style for cart pop up 
+
+.cart-popup{
+    width: 330px;
+    height: 350px;
+    background-color: white;
+    border: 0.5px #e6e5e5 solid;
+    position: absolute;
+    right: 0;
+    top: -350px;
+    margin-top: 55px;
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.cart-title {
+    display: flex;
+    justify-content: space-between;
+    background-color: #EEEEEE;
+    padding: 0.5em 1em;
+    .fas {
+        font-size: 1.5rem;
+        cursor: pointer;
+        &:hover{
+            color: #0770CF;
+        }
+        
+    }
+}
+.cart-item {
+    padding: 0.5em 1em;
+    height: 50%;
+    overflow-y: auto;
+
+}
+.sub-total {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F8F8F8;
+    padding: 1em 1em;
+    p {
+        margin: 0;
+    }
+}
+
+.cart-cta {
+    display: flex;
+    justify-content: space-between;
+    background-color: #EEEEEE;
+    padding: 1em 1em;
+    button {
+        text-align: center;
+        padding: 0.4em 1.3em ;
+    }
+    :nth-child(1){
+        background-color: #FFF;
+        color: #000;
+        font-weight: bold;
+        border: 2px #cccccc solid;
+        &:hover{
+            background-color: #EEEEEE;
+        }
+        
+    }
+    :nth-child(2){
+        background-color: #02884a;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        &:hover{
+            background-color: #006637;
+        }
+    }
+   
+}
+
+
+// style for cart_items partial 
 .my_cart {
     display: flex;
     padding-top: .5em;
