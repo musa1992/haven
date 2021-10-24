@@ -20,6 +20,7 @@ document.addEventListener('turbolinks:load', ()=>{
     const cartPopup = document.querySelector('.cart-popup')
     const closeCart = document.querySelector('.close-cart')
     const cart = document.querySelector('.cart')
+    const displayOnCartPage = document.getElementsByClassName('only-cart-display')
     var myPath = window.location.pathname
     var page = myPath.split("/").pop()
 
@@ -42,6 +43,13 @@ document.addEventListener('turbolinks:load', ()=>{
     cartPopup.addEventListener('mouseleave', ()=>{
         cartPopup.style.top = "-352px"
     })
+
+    if (document.readyState === 'complete' && page === 'index'){
+        for (var i = 0; i < displayOnCartPage.length; i ++){
+            displayOnCartPage[i].style.display = "block"
+        }
+    }
+
 })
 
 

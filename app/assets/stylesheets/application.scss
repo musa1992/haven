@@ -135,12 +135,39 @@ body{
 }
 .cart-product-details {
     display: flex;
-    justify-content: space-between;
     margin-top: .5em;
     font-size: 0.75em;
-
+    :nth-child(2){
+        margin-left: .5em;
+        margin-right: .5em;
+    }
+    
 }
+
+
 
 .cart-product-details > * {
     box-sizing: border-box;
+    display: flex;
+}
+
+.cart-qty {
+    position: relative;
+    .fas {
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .fa-angle-up {
+        position: absolute;
+        top: -2px;
+    }
+    .fa-angle-down {
+        position: absolute;
+        left: -6px;
+        bottom: -2px;
+    }
+}
+
+.only-cart-display {
+    display: none;
 }
