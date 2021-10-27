@@ -21,6 +21,8 @@ document.addEventListener('turbolinks:load', ()=>{
     const closeCart = document.querySelector('.close-cart')
     const cart = document.querySelector('.cart')
     const displayOnCartPage = document.getElementsByClassName('only-cart-display')
+    const cartPartial = document.getElementById('cart-products')
+    
     var myPath = window.location.pathname
     var page = myPath.split("/").pop()
 
@@ -49,7 +51,14 @@ document.addEventListener('turbolinks:load', ()=>{
             displayOnCartPage[i].style.display = "block"
         }
     }
+    const colorSelect = cartPartial.querySelector('.color-select')
+    var selectedColor = cartPartial.querySelector('.selected-color')
 
+    colorSelect.addEventListener('change',(e)=>{
+        var select = e.target
+        var color = select.options[select.selectedIndex].text
+        selectedColor.innerHTML = color
+    })
 })
 
 
