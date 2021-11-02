@@ -53,11 +53,41 @@ document.addEventListener('turbolinks:load', ()=>{
     }
     const colorSelect = cartPartial.querySelector('.color-select')
     var selectedColor = cartPartial.querySelector('.selected-color')
+    const sizeSelect = cartPartial.querySelector('.size-select')
+    var selectedSize = cartPartial.querySelector('.selected-size')
+    var quantity = cartPartial.querySelector('.selected-quantity')
+    const quantitySelect = cartPartial.querySelector('.quantity-select')
 
     colorSelect.addEventListener('change',(e)=>{
         var select = e.target
         var color = select.options[select.selectedIndex].text
         selectedColor.innerHTML = color
+    })
+
+    sizeSelect.addEventListener('change',(e)=>{
+        var select = e.target
+        var size = select.options[select.selectedIndex].text
+        selectedSize.innerHTML = size
+    })
+
+    quantitySelect.addEventListener('click',(e)=>{
+        let qty = parseInt(quantity.innerHTML)
+
+        if (e.target.classList.contains('fa-angle-up')){
+            qty += 1
+            quantity.innerHTML = qty
+        }
+
+        if (e.target.classList.contains('fa-angle-down')){
+            qty -= 1
+            if (qty == 0){
+                quantity.innerHTML = "1"
+            }else {
+                quantity.innerHTML = qty
+            }
+            
+        }
+
     })
 })
 
